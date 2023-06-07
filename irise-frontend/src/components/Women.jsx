@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 
-const Women = () => {
-
+const Women = ({ isLogged }) => {
+    console.log(isLogged, "isLogged")
     const [counter, setCounter] = useState(0)
     const [counter2, setCounter2] = useState(0)
 
-    //Type 1
+    // Type 1
     // useEffect(() => {
     //     console.log("Code executed inside useEffect.")
     // })
@@ -17,7 +17,7 @@ const Women = () => {
     // useEffect(()=> {
     //     console.log("Code executed inside useEffect for type 3.")
     // }, [counter])
-    //tYPE 4
+    // tYPE 4
     useEffect(() => {
         console.log("Code executed inside useEffect for type 4.")
     }, [counter, counter2])
@@ -32,6 +32,7 @@ const Women = () => {
 
     return (
         <div>
+            {isLogged == "true" ? <h1>Welcome</h1> : <h1>Please login!</h1>}
             <h2>Women</h2>
             <h3>Counter 1  : {counter}</h3>
             <button onClick={increment}>+</button>
