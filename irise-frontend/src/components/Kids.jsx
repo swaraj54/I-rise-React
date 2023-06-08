@@ -1,13 +1,14 @@
-
+import './Home.css';
 
 const Kids = ({ items }) => {
     console.log(items, "items")
     return (
         <>
-            <div>Kidds</div>
+            <div id="myId">Kidds</div>
             <div>Kidds 2</div>
+            {items ? <h1>We have items</h1> : <h1>Dont have items</h1>}
             {items.map((i) => (
-                <h1>{i}</h1>
+                <h1 className="color-red">{i}</h1>
             ))}
         </>
     )
