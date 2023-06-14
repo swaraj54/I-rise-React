@@ -13,12 +13,14 @@ import DynamicClasses from './components/DynamicClasses';
 import Props from './components/Props';
 import ChildrenProps from './components/ChildrenProps';
 import RegisterForm from './components/RegisterForm';
+import GetProducts from './components/GetProducts';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path='/get-products' element={<GetProducts />} />
         <Route path='/register-form' element={<RegisterForm />} />
         {/* <Route path='/login-form' element={<LoginForm />} /> */}
         <Route path='/children-props' element={<ChildrenProps myValue='Sign Up' />} />
