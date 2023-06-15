@@ -14,12 +14,14 @@ import Props from './components/Props';
 import ChildrenProps from './components/ChildrenProps';
 import RegisterForm from './components/RegisterForm';
 import GetProducts from './components/GetProducts';
+import HandleLoading from './components/HandleLoading';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path='/handle-loading' element={<HandleLoading />} />
         <Route path='/get-products' element={<GetProducts />} />
         <Route path='/register-form' element={<RegisterForm />} />
         {/* <Route path='/login-form' element={<LoginForm />} /> */}
