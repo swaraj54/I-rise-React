@@ -1,7 +1,7 @@
 import { useDebugValue, useState } from "react";
 
 const LoginForm = () => {
-    const [userData, setUserData] = useState({ email: 'test@gmail.com', password: '' });
+    const [userData, setUserData] = useState({ email: '', password: '' });
     console.log(userData, "- userdata")
 
     function handleChange(event) {
