@@ -17,12 +17,14 @@ import GetProducts from './components/GetProducts';
 import HandleLoading from './components/HandleLoading';
 import LoginForm from './components/LoginForm';
 import PracticeGetProduct from './components/PracticeGetProduct';
+import SingleProduct from './components/SingleProduct';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path='/single-product/:id' element={<SingleProduct />} />
         <Route path='/practic-get-products' element={<PracticeGetProduct />} />
         <Route path='/login-form' element={<LoginForm />} />
         <Route path='/handle-loading' element={<HandleLoading />} />
