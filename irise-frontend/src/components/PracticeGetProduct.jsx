@@ -26,7 +26,7 @@ const PracticeGetProduct = () => {
 
     return (
         <div>
-            <h1>PracticeGetProduct</h1>
+            <h1>All Products</h1>
             {isLoadingTrue ? <h1>Loading...</h1> :
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: "space-around" }}>
                     {products.map((product) => (
