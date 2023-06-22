@@ -1,8 +1,10 @@
 import { useDebugValue, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+    const router = useNavigate();
     const [userData, setUserData] = useState({ email: '', password: '' });
-    console.log(userData, "- userdata")
+    // console.log(userData, "- userdata")
 
     function handleChange(event) {
         // console.log(event.target.value, "event.target.value")
@@ -14,9 +16,25 @@ const LoginForm = () => {
         event.preventDefault();
         // check conditions
         if (userData.email && userData.password) {
-            alert("Got it..")
+            // alert("Got it..")
             // call backend and send data
-            setUserData({ email: '', password: '' })
+
+            var Users = JSON.parse(localStorage.getItem('Users'));
+
+            var isUserFound = false;
+            for (var i = 0; i < Users.length; i++) {
+                // console.log(Users[i].email, Users[i].password)
+                if (Users[i].email == userData.email && Users[i].password == userData.password) {
+                    isUserFound = true;
+                }
+            }
+            if (isUserFound == true) {
+                alert("You are logged In.")
+                router('/');
+                setUserData({ email: '', password: '' })
+            } else {
+                alert("Please check your credentials..")
+            }
         } else {
             alert("All fields Required!")
         }
