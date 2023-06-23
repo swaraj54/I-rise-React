@@ -12,6 +12,14 @@ const Cart = () => {
         setCartProducts(products) // 2 step
     }, [])
 
+    useEffect(() => {
+        const currentUser = JSON.parse(localStorage.getItem("current-user"))
+        if (!currentUser?.email) {
+            router('/login-form')
+            alert("Please login!")
+        }
+    }, [])
+
     function buyProduct() {
         // alert("Inside funcion")
         localStorage.removeItem("products") // 4 step - removing from browser
