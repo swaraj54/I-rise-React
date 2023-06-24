@@ -19,12 +19,17 @@ import LoginForm from './components/LoginForm';
 import PracticeGetProduct from './components/PracticeGetProduct';
 import SingleProduct from './components/SingleProduct';
 import Cart from './components/Cart';
+import AddProducts from './components/AddProducts';
+import Products from './components/Products';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path='/products' element={<Products />} />
+        <Route path='/add-products' element={<AddProducts />} />
+
         <Route path='/cart' element={<Cart />} />
         <Route path='/single-product/:id' element={<SingleProduct />} />
         <Route path='/practic-get-products' element={<PracticeGetProduct />} />
