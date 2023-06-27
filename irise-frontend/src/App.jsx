@@ -21,12 +21,14 @@ import SingleProduct from './components/SingleProduct';
 import Cart from './components/Cart';
 import AddProducts from './components/AddProducts';
 import Products from './components/Products';
+import Memo from './components/Memo';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path='/memo' element={<Memo />} />
         <Route path='/products' element={<Products />} />
         <Route path='/add-products' element={<AddProducts />} />
 
