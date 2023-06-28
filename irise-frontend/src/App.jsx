@@ -22,12 +22,14 @@ import Cart from './components/Cart';
 import AddProducts from './components/AddProducts';
 import Products from './components/Products';
 import Memo from './components/Memo';
+import Callback from './components/Callback';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path='/callback' element={<Callback />} />
         <Route path='/memo' element={<Memo />} />
         <Route path='/products' element={<Products />} />
         <Route path='/add-products' element={<AddProducts />} />
