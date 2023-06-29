@@ -23,12 +23,14 @@ import AddProducts from './components/AddProducts';
 import Products from './components/Products';
 import Memo from './components/Memo';
 import Callback from './components/Callback';
+import Counter from './components/Reducer';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path="/reducer" element={<Counter />} />
         <Route path='/callback' element={<Callback />} />
         <Route path='/memo' element={<Memo />} />
         <Route path='/products' element={<Products />} />
