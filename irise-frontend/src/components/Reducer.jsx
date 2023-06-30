@@ -22,7 +22,7 @@ const Counter = () => {
     const [state, dispatch] = useReducer(reducer, initialState); // STEP 3
     // Event handlers  STEP - 5
     const increment = () => {
-        dispatch({ type: "INCREMENT" });
+        dispatch({ type: "INCREMENT"});
     };
 
     const decrement = () => {

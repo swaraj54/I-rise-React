@@ -24,12 +24,18 @@ import Products from './components/Products';
 import Memo from './components/Memo';
 import Callback from './components/Callback';
 import Counter from './components/Reducer';
+import Ref from './components/Ref';
+import Form from './components/Form';
+import CustomHook from './components/CustomHook';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
+        <Route path='/custom-hook' element={<CustomHook />} />
+        <Route path='/form' element={<Form />} />
+        <Route path='/ref' element={<Ref />} />
         <Route path="/reducer" element={<Counter />} />
         <Route path='/callback' element={<Callback />} />
         <Route path='/memo' element={<Memo />} />
